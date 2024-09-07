@@ -163,37 +163,59 @@ body {
   margin-bottom: 30px;
 }
 
-.services .service h3{
+.services .service h3 {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 10px;
 }
 
 .services .service p {
-font-weight: 400;
-font-size: 1.8rem;
-line-height: 30px;
-max-width: 400;
-margin: 20px auto 0;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 30px;
+  max-width: 400;
+  margin: 20px auto 0;
 }
 
-.services .service:nth-child(1){
+.services .service:nth-child(1) {
   background-color: lightskyblue;
 }
-.services .service:nth-child(2){
+.services .service:nth-child(2) {
   background-color: lightpink;
 }
 
-@media(max-width:425px){
-  .services{
+@media (max-width: 425px) {
+  .services {
     grid-template-columns: 1fr;
   }
 }
 
 .projects {
   grid-area: projects;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.project img {
+  height: 100%;
+  transition: 0.3s;
 }
 
+.project a:hover img {
+  opacity: 0.8;
+}
+
+@media (max-width:768px) {
+  .projects{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+@media (max-width:425px) {
+  .projects{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+}
 .footer {
   grid-area: footer;
 }
